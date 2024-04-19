@@ -10,5 +10,22 @@ namespace GameUnits
             AttackPower = attackPower;
             XP = 0;
         }
+
+        public override int Health{
+            get{ 
+                return base.Health + XP;
+            }set{
+                base.Health = value;
+            }
+        }
+        public override float Cost{
+            get{ 
+                return AttackPower + XP;
+            }
+        }
+        public void Attack(Unit u) {
+            XP += XP;
+            u.Health -= AttackPower;
+        }
     }
 }
