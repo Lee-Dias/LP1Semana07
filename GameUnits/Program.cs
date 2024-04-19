@@ -6,6 +6,7 @@ namespace GameUnits
     {
         static void Main(string[] args)
         {
+            bool t = true;
             Unit[] units = new Unit[]
             {
                 new MilitaryUnit(2, 7, 1),
@@ -15,13 +16,16 @@ namespace GameUnits
                 new SettlerUnit(),
             };
 
+            
+
             (units[0] as MilitaryUnit).Attack(units[1]);
             (units[1] as MilitaryUnit).Attack(units[3]);
             (units[2] as MilitaryUnit).Attack(units[2]);
 
             foreach (Unit u in units)
-            {
-                Console.WriteLine(u);
+            {                
+                
+                Console.WriteLine($" {u} movement- {u.Move()}");
             }
         }
     }
