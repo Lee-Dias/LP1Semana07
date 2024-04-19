@@ -1,10 +1,10 @@
 namespace GameUnits
 {
-    public class settlerUnit : Unit // Heranca!!
+    public class SettlerUnit : Unit // Heranca!!
     {
 
 
-        public settlerUnit() : base(1, 3){}
+        public SettlerUnit() : base(1, 3){}
 
         public override float Cost{
             get{ 
